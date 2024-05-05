@@ -1,23 +1,25 @@
-import React from 'react'
-import Button from './Button';
-import Picture from './Picture';
-import Text from './Text';
-
 const Card = ({ title, text, picture, url }) => {
+
   return (
     <div className='card-container'>
         {/* Picture container */}
-        <Picture title={title} picture={picture}/>
+            <div className="picture-container">
+                <img src={picture} alt={title} className="picture" />
+            </div>
 
         {/* non picture container */}
         <div className="non-picture-container">
+            <div className="text-url-container">
+                {/* text container */}
+                <div className="text-container">
+                    <div className="title">{title}</div>
+                    <div className="text">{text}</div>
+                </div>
 
-            <Text title={title} text={text} url={url} />
-
-            {/* buttons container */}
-             <div className="buttons-container">
-                <Button action={moveForward} type={">"} />
-                <Button action={moveBackward} type={"<"} />
+                {/* url container */}
+                <div className="url-container">
+                    <div className="url">Further reading: {url}</div>
+                </div>
             </div>
         </div>
 
