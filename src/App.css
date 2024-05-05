@@ -3,58 +3,118 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 15%;
+  margin-left: 0.3em;
+  margin-right: 0.3em; 
 }
 
 /* card container */
 .card-container {
-  border: solid orange;
+  border: solid rgba(15, 15, 94, 0.521);
+  display: flex;
+  box-shadow: 5px 10px 23px -1px rgba(19, 19, 66, 0.295);
 }
 
 /* picture container */
 .picture-container {
-  border: solid gray;
+  border-right: 1px solid gray;
+  width: 50%;
+  min-height: 40vh;
+  max-height: 40vh;
 }
 
 .picture {
-  border: solid blue;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* non picture container */
 .non-picture-container {
-  border: solid purple;
+  /* border: solid purple; */
+  width: 50%;
+
 }
 
 /* text-url-container */
 .text-url-container {
-  border: solid seagreen;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
 }
 
 /* Text container */
 .text-container {
-  border: solid green;
+  padding: 2em;
+  margin-top: 0.5em;
 }
 
 .title {
-  border: solid yellowgreen;
+  font-weight: 600;
+  letter-spacing: 0.2vw;
 }
 
 .text {
-  border: solid black;
+  padding: 0.5em;
 }
 
 /* url container */
 .url-container {
-  border: solid crimson;
+  border: 1px solid rgba(230, 230, 253, 0.721);
+  height: 20%;
+  background-color: rgba(230, 230, 253, 0.521);
 }
 
 .url {
-  border: solid pink;
+  padding: 0.4em;
 }
+
+.url a{
+  color: black;
+}
+
+/* dot container */
+.dot-container {
+  display: flex;
+  gap:5%;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot {
+  color: rgb(161, 161, 161);  
+}
+
+.current-dot {
+  color: rgb(47, 23, 202);
+}
+
 /* buttons container */
 .buttons-container {
-  border: solid salmon;
+  border: 1px solid rgba(58, 23, 19, 0.466);
+  background-color: rgba(226, 216, 215, 0.541);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  padding: 0.3em;
+  margin: 1em;
+  gap:7%;
+  box-shadow: 5px 10px 23px -1px rgba(75, 46, 43, 0.384);
 }
 
 .btn {
-  border: solid slateblue;
+  border: 2px solid rgb(85, 66, 211);
+  background-color: rgba(250, 250, 250, 0.719);
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  border: 2px solid rgba(58, 23, 19, 0.623);
+  background-color: rgba(250, 250, 250, 0.842);
 }

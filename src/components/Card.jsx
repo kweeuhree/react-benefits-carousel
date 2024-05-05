@@ -1,10 +1,10 @@
-const Card = ({ title, text, picture, url }) => {
-
+const Card = ({ title, text, picture, url, shortcut }) => {
+    console.log('this is picture ', picture)
   return (
     <div className='card-container'>
         {/* Picture container */}
             <div className="picture-container">
-                <img src={picture} alt={title} className="picture" />
+                <img className="picture" src={picture} alt={title} />
             </div>
 
         {/* non picture container */}
@@ -18,7 +18,7 @@ const Card = ({ title, text, picture, url }) => {
 
                 {/* url container */}
                 <div className="url-container">
-                    <div className="url">Further reading: {url}</div>
+                    <div className="url">Further reading: <a href={url} target="_blank">{shortcut}</a></div>
                 </div>
             </div>
         </div>

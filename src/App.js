@@ -1,6 +1,7 @@
 import facts from './models/facts'; // import facts 
 import Card from './components/Card';
 import Button from './components/Button';
+import Dot from './components/Dot';
 import { useState } from 'react';
 import './App.css';
 
@@ -24,12 +25,20 @@ function App() {
     return (
       <div className='App'>
 
-        <Card title={currentCard.title} text={currentCard.text} picture={currentCard.picture} url={currentCard.url} />
+        <Card title={currentCard.title} text={currentCard.text} picture={currentCard.picture} url={currentCard.url}  shortcut={currentCard.shortcut} />
+
+       {/* dots container */}
+       <div className='dot-container'>
+        {facts.map((item, index) => (
+          <Dot key={index} current={index === count} />
+        ))}
+      </div>
 
        {/* buttons container */}
          <div className="buttons-container">
-           <Button action={moveForward} type={">"} />
            <Button action={moveBackward} type={"<"} />
+           <Button action={moveForward} type={">"} />
+
         </div>
 
       </div>
