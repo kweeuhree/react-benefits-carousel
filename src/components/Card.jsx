@@ -18,7 +18,7 @@ const Card = ({ title, text, picture, url, shortcut }) => {
 
                 {/* url container */}
                 <div className="url-container">
-                    <div className="url">Further reading: <a href={url} target="_blank">{shortcut}</a></div>
+                    <div className="url">Further reading: <a href={url} rel="noreferrer" target="_blank">{shortcut}</a></div>
                 </div>
             </div>
         </div>
